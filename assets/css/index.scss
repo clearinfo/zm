@@ -1,0 +1,205 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background: #fff;
+  font-family:arial,"Hiragino Sans GB","Microsoft Yahei",Tahoma,Helvetica,STHeiti;
+  font-size: 14px;
+  color:#333333;
+  margin: 0;
+  padding: 0;
+}
+.clearfix{
+  clear: both;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
+}
+ul,ol,li,dd,dt,p{
+  margin: 0;padding: 0;list-style: none;
+}
+img{border:none;margin:0;padding:0;}
+a{text-decoration: none;color:#333333;}
+@mixin radius($v:5px){
+  border-radius: $v;
+  -webkit-border-radius: $v;
+  -moz-border-radius: $v;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  font-size: 18px;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.zimei-pages{
+  background:url("../images/bg.jpg") no-repeat center 0 ;
+  background-size: cover;
+}
+.zimei-top{
+  padding:23px 0 0 50px;
+  span{
+    float: left;
+  }
+  span.zm-t2{
+    padding:0 0 0 20px;
+  }
+}
+.zimei-container{
+  width:1100px;
+  margin: 0 auto;
+}
+.zimei-infor{
+  font-size: 20px;
+  line-height: 45px;
+  background: url("../images/logo.png") no-repeat;
+  padding:45px 0 0 195px;
+  height: 310px;
+  p{
+    text-indent: 2em;
+    line-height: 45px;
+  }
+  .zimei-h4{
+    font-size: 22px;
+    line-height: 2;
+    font-weight: bold;
+    height:60px;
+  }
+}
+.zimei-tabpane{
+  box-shadow:0px 0px 8px #8083b3;
+  -webkit-box-shadow:0px 0px 8px #8083b3;
+  -moz-box-shadow:0px 0px 8px #8083b3;
+  .zimei-menu{
+    width:534px;margin:0 auto;
+    ul{
+      margin:0 0 0 40px;
+      li{
+        float: left;
+        margin:0 0 0 -40px;
+        position: relative;
+        z-index: 1;
+        zoom:1;
+        width: 178px;height: 43px;line-height:43px;color:#ffffff;text-align: center;
+        background: url("../images/tab-t1.png");
+        span{
+          cursor: pointer;
+        }
+      }
+      li.curr{
+        background: url("../images/tab-t2.png");
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+  .zimei-content{
+    padding:40px 0 0 0;
+  }
+}
+.zmiti-china-province li {
+  float: left;
+  width: 173px;
+  line-height: 50px;
+  margin: 0 0px 15px 28px;
+  text-align: center;
+  border: 1px solid #8083b3;
+  background-color: #ffffff;
+  cursor: pointer;
+  a{
+    color:#434897;
+  }
+  @include radius(3px);
+}
+.zmiti-china-province li.curr2{
+  background-color: #8083b3;
+  a{
+    color:#ffffff;
+  }
+}
+.zmiti-china-province li.zimei-last-edu{
+  padding-left:10px;
+  padding-right:10px;
+  width:auto;
+}
+.zmiti-china-dialog{
+  width: 100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  display:none;
+  z-index:1000;
+  background:rgba(0,0,0, 0.7);
+  .zmiti-china-close{
+    color:#ffffff;
+    font-size:20px;
+    line-height: 1;
+    text-align:center;
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #8083b3;
+    position: absolute;
+    right:20px;
+    top:20px;
+    @include radius(50%);
+  }
+  .zmiti-china-dialog-inner{
+    padding:0 20px;
+    width:832px;
+    margin:0 auto;
+    background-color: #ffffff;
+    position: relative;
+  }
+  .zmiti-china-dialog-tit{
+    font-size:20px;
+    line-height:1.5;
+    padding:20px 0 10px 30px;
+  }
+  .zmiti-china-dialog-imgs{
+    width:240px;
+    height:240px;
+    margin:0 auto;
+    display:block;
+    padding:15px 0 0 0;
+  }
+  .zmiti-china-dialog-tips{
+    color:#d00808;
+    font-size:20px;
+    line-height:2;
+    padding:5px 0 0 0;
+  }
+  .zmiti-china-dialog-text{
+    color:#333333;
+    font-size:20px;
+    line-height:2;
+    ol{
+      padding-left:10px;
+      li{
+        margin-left:20px;
+        list-style-type: decimal;
+      }
+    }
+  }
+  .zmiti-china-dialog-code{
+    text-align:center;
+    font-size:20px;
+    padding:12px 0 0 0;
+  }
+
+}
+.zimei-tishi{
+  width:510px;
+  margin: 0 auto;
+  padding:0 0 50px 0;
+}
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+  .zimei-top{display: none;}
+  .zimei-container{width:100%;}
+}

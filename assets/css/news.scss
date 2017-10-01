@@ -1,0 +1,445 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  font-family:arial,"Hiragino Sans GB","Microsoft Yahei",Tahoma,Helvetica,STHeiti;
+  font-size: 14px;
+  color:#333333;
+  margin: 0;
+  padding: 0;
+  background:#f8f5ef;
+}
+.clearfix{
+  clear: both;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
+}
+ul,ol,li,dd,dt,p{
+  margin: 0;padding: 0;list-style: none;
+}
+img{border:none;margin:0;padding:0;}
+a{text-decoration: none;color:#333333;}
+@mixin radius($v:5px){
+  border-radius: $v;
+  -webkit-border-radius: $v;
+  -moz-border-radius: $v;
+}
+.zimei-img-top,.zimei-img-top-pc{
+  position: absolute;
+  left:0;
+  top:0;
+  z-index: 1;
+  img{
+    display: block;
+    width:100%;
+  }
+}
+.zimei-img-top{display: none;}
+.zimei-img-bottom{
+  position: absolute;
+  left:0;
+  bottom:0;
+  z-index: 1;
+  background: url(../images/pc-footer.jpg) no-repeat center bottom;
+  width:100%;
+  height: 473px;
+  img{
+    display: none;
+    width:100%;
+  }
+}
+.zimei-pages{
+  position: relative;
+  z-index: 2;
+  zoom: 1;
+  background: url("../images/pc-1.jpg") no-repeat center 0;
+  padding:0 0 200px 0;
+}
+.zimei-top{
+  padding:20px;
+  position: relative;
+  zoom:1;
+  .zimei-gb{
+  	position: absolute;
+  	top:20px;
+  	right:20px;
+  	width:134px;
+  	height:32px;
+  	img{
+  		display: block;
+  		width:134px;
+  		height:32px;
+  	}
+  }
+  span {
+    float: left;
+  }
+  span.zm-t2 {
+    padding: 0 0 0 20px;
+  }
+  img{height:85px;}
+}
+.zimei-logo{
+  img{
+    margin:0 auto;
+    height:155px;
+    display: block;
+  }
+}
+.zimei-container{
+  padding:0 20px;
+  width:1098px;
+  margin:0 auto;
+}
+img.imgposition{
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+}
+div.divposition2{
+  position: absolute;
+  left: 0;
+  top:0px;
+  z-index:5;
+  display: block;
+  width: 100%;
+  height: 106px;
+  background: url(../images/pc-3.png) no-repeat center 0;
+}
+.item2 div.divposition2{top:-2px;}
+img.imgposition2{
+  position: absolute;
+  left: 0;
+  top:-0.3rem;
+  z-index:5;
+  display: none;
+  width: 100%;
+}
+.zimei-inner{
+  position: relative;
+  z-index: 3;
+  zoom: 1;
+}
+.zimei-infor .zimei-inner {
+    padding: 0 50px;
+}
+.zimei-inner2{
+  position: relative;
+  z-index: 4;
+  zoom: 1;
+  margin-bottom:20px;
+  top:-45px;
+}
+.zimei-infor{
+  position: relative;
+  zoom: 1;
+  padding: 0 0 20px 0;
+  margin: 0 auto 10px auto;
+  width:1129px;
+  height: 285px;
+  background:url("../images/pc-8.png") no-repeat center top;
+  div{
+    text-indent: 2em;
+    line-height: 36px;
+    font-size:18px;
+    padding:120px 0 0 0;
+    color:#ffffff;
+  }
+  p{display: none;}
+  .imgposition{display: none;}
+}
+.zimei-item{
+  .item-inner{
+    background-color: #ffffff;
+    position: relative;
+    top:45px;
+    padding:0 0 3px 0;
+    @include radius(10px);
+  }
+  .item-title{
+    text-align: center;
+    font-size:24px;
+    color: #ffffff;
+    padding:55px 0 0 0;
+    position: absolute;
+    z-index: 10;
+    top:4px;
+    width: 100%;
+  }
+}
+.item2 .item-title{top:0px;}
+.zimei-media{
+  padding:110px 0 0px 0;
+  .zm-thumb{
+    img{
+      display: block;
+      margin: 0 auto;
+      height:95px;
+    }
+  }
+  li{
+    width:155px;
+    float:left;
+    margin:0 0 30px 25px;
+    font-size:16px;
+    text-align: center;
+    .zm-sm1{
+      padding:8px 0 0 0;
+    }
+  }
+}
+.zimei-province{
+  padding:80px 0 20px 0;
+}
+.zimei-province .zmiti-china-province li {
+  float: left;
+  text-align: center;
+  border: 1px solid #efe7d9;
+  background-color: #ffffff;
+  box-shadow:4px 4px 2px #efe7d9;
+
+  -webkit-box-shadow:4px 4px 2px #efe7d9;
+  -moz-box-shadow:4px 4px 2px #efe7d9;
+  line-height: 2;
+  width: 180px;
+  font-size:16px;
+  margin:0 0 20px 30px;
+}
+.zimei-province .zmiti-china-province li.zimei-last-edu {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: auto;
+}
+/*dialog*/
+.zmiti-china-dialog{
+  width: 100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  display:none;
+  z-index:1000;
+  background:rgba(0,0,0, 0.7);
+  .zmiti-china-close{
+    color:#ffffff;
+    font-size:20px;
+    line-height: 1;
+    text-align:center;
+    width:30px;
+    height:30px;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: #8083b3;
+    position: absolute;
+    right:20px;
+    top:20px;
+    @include radius(50%);
+  }
+  .zmiti-china-dialog-inner{
+    padding:0 20px;
+    width:600px;
+    margin:0 auto;
+    background-color: #ffffff;
+    position: relative;
+    @include radius(5px);
+  }
+  .zmiti-china-dialog-tit{
+    font-size:20px;
+    line-height:1.5;
+    padding:20px 0 10px 30px;
+  }
+  .zmiti-china-dialog-imgs{
+    width:240px;
+    height:240px;
+    margin:0 auto;
+    display:block;
+    padding:15px 0 0 0;
+  }
+  .zmiti-china-dialog-tips{
+    color:#d00808;
+    font-size:20px;
+    line-height:2;
+    padding:5px 0 0 0;
+  }
+  .zmiti-china-dialog-text{
+    color:#333333;
+    font-size:20px;
+    line-height:2;
+    ol{
+      padding-left:10px;
+      li{
+        margin-left:20px;
+        list-style-type: decimal;
+      }
+    }
+  }
+  .zmiti-china-dialog-code{
+    text-align:center;
+    font-size:20px;
+    padding:12px 0 0 0;
+  }
+
+}
+.zimei-tishi{
+  width:510px;
+  margin: 0 auto;
+  padding:0 0 50px 0;
+}
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+	.zimei-inner2{top:0;}
+	.zimei-item .item-title{
+		font-size: 0.3rem; padding: 0.6rem 0 0 0;
+		top:0.06rem;
+	}
+	.item1 .item-title{
+		font-size: 0.3rem; padding: 0.5rem 0 0 0;
+	}
+	img.imgposition2{display: block;}
+	div.divposition2{display: none;}
+	.zimei-img-bottom{height: auto;}
+	.zimei-img-bottom img{display: block;}
+	.zimei-infor{width:10rem;height: auto;
+    padding: 0 0 0.2rem 0;
+    margin: 0 0 0.1rem 0;
+    background: none;
+  }
+  .zimei-infor .imgposition {
+    display: block;
+  }
+  .zimei-logo{
+    img{
+      height:2rem;
+    }
+  }
+  .zimei-img-top-pc{
+    display: none;
+  }
+  .zimei-img-top{
+    display: block;
+  }
+  .zimei-pages{
+    background: none;
+  }
+  .zimei-top{
+    padding:0.2rem;
+    img{height:1rem;}
+    span.zm-t2 {
+      padding: 0 0 0 0.2rem;
+    }
+  }
+
+  .zimei-logo{
+    img{
+      margin:0 auto;
+      height:2rem;
+      display: block;
+    }
+  }
+  .zimei-container{
+    padding:0 0.3rem;
+  }
+  .zimei-infor{
+    position: relative;
+    margin:0;
+    zoom:1;
+    p{
+      text-indent: 2em;
+      line-height: 0.55rem;
+      font-size:0.35rem;
+      padding:1.3rem 0 0 0;
+      display: block;
+    }    
+    .zimei-inner{
+      padding:0 0.5rem;
+      div{
+      	display: none;
+      }
+    }
+  }
+  .zmiti-china-dialog{
+    .zmiti-china-dialog-tit{
+      font-size:0.5rem;
+      padding:0.2rem 0 0.1rem 0.3rem;
+    }
+    .zmiti-china-dialog-imgs{
+      width:2.4rem;
+      height:2.4rem;
+      padding:0.2rem 0 0 0;
+    }
+    .zmiti-china-dialog-tips{
+      font-size:0.3rem;
+      padding:0.1rem 0 0 0;
+    }
+    .zmiti-china-dialog-text{
+      color:#333333;
+      font-size:0.3rem;
+      ol{
+        padding-left:0.1rem;
+        li{
+          margin-left:0.3rem;
+        }
+      }
+    }
+    .zmiti-china-dialog-code{
+      font-size:0.3rem;
+      padding:0.3rem 0 0 0;
+    }
+    .zimei-tishi{width:7rem;}
+    .zmiti-china-close{
+      font-size:0.4rem;
+      width:0.6rem;
+      height:0.6rem;
+      line-height: 0.6rem;
+      right:0.3rem;
+      top:0.3rem;
+    }
+  }
+  .zimei-province .zmiti-china-province li.zimei-last-edu {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+	
+	.zimei-media{
+	  padding:1.1rem 0 0.5rem 0;
+	  .zm-thumb{
+	    img{
+	      height:1rem;
+	    }
+	  }
+	  li{
+	    width:2rem;
+	    margin:0 0 0.1rem 0.25rem;
+	    font-size:0.3rem;
+	  }
+	}
+	.zimei-container{width:100%;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+	}
+	.item2 .item-title{top:-2px;}
+	.zimei-item{
+	  .item-inner{
+	    top:0.33rem;
+	    padding:0 0 0.3rem 0;
+	    @include radius(5px);
+	  }
+	}
+	.zimei-province .zmiti-china-province li {
+		width: 2.5rem;
+		font-size:0.3rem;
+		margin:0 0 0.2rem 0.4rem;
+	}
+	.zmiti-china-dialog .zmiti-china-dialog-inner{width:8rem;}
+	.zimei-inner2{margin-bottom: 0.25rem;}
+	.zimei-province {padding: 1rem 0 0 0;}
+	.zimei-gb{display: none;}
+  .zimei-pages{padding: 0 0 2rem 0;}
+  .zimei-media li .zm-sm1{
+    padding:0.1rem 0 0 0;
+  }
+}
