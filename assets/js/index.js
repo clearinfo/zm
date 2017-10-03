@@ -6,7 +6,7 @@ var dialogname,dialogtext,dialogdes,dialogtips,dialogimgurl,dialogcode;
 $(".zimei-container li").click(function(){
 
     var indexNum = $(".zimei-container li").index(this);
-    console.log(indexNum,"123456");
+    //console.log(indexNum,"123456");
     dialogname=dataCode[indexNum].name;
     dialogimgurl=dataCode[indexNum].imgurl;
     dialogcode=dataCode[indexNum].code;
